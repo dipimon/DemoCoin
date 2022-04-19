@@ -16,15 +16,8 @@ namespace DemoCoin
         #endregion
 
         #region Constructor
-        public Blockchain()
-        {
-            Blocks = new List<Block>();
-            PendingTransactions = new List<Transaction>();
-            Difficulty = 2;
-            Blocks.Add(new Block(DateTime.Now, PendingTransactions, "0"));
-        }
 
-        public Blockchain(int difficulty)
+        public Blockchain(int difficulty = 2)
         {
             Blocks = new List<Block>();
             PendingTransactions = new List<Transaction>();
@@ -34,7 +27,7 @@ namespace DemoCoin
         #endregion
 
         #region Methods
-        public bool AddBlock(Transaction data)
+        /*public bool AddBlock(Transaction data)
         {
             Block block = new Block(DateTime.Now, PendingTransactions, GetLatestBlock().Hash);
             block.MineBlock(Difficulty);
@@ -48,7 +41,7 @@ namespace DemoCoin
                 }
             }
             return ret;
-        }
+        }*/
 
         public void MinePendingTransactions(string miningRewardAddress)
         {

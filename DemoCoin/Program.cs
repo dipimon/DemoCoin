@@ -10,7 +10,7 @@ namespace DemoCoin
     {
         static void Main(string[] args)
         {
-            var blockchain = new Blockchain(4);
+            var blockchain = new Blockchain();
             blockchain.CreateTranaction(new Transaction("address1", "address2", 100));
             blockchain.CreateTranaction(new Transaction("address2", "address1", 50));
 
